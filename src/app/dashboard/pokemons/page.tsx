@@ -5,7 +5,7 @@ import { SearchParams } from '@/types/next'
 import Index, { Props } from '@/app/dashboard/pokemons/index'
 
 const fetchPokemons = async (searchParams: SearchParams): Promise<Props['props']> => {
-  const pokemonListURL = `${process.env.NEXT_PUBLIC_POKEMON_LIST_API_BASE_URL}pokemons` || ''
+  const pokemonListURL = `${process.env.NEXT_PUBLIC_POKEMON_LIST_API_BASE_URL}en_pokemons` || ''
   let page = 1
   if (searchParams?.page) {
     page = parseInt(searchParams.page.toString(), 10)
@@ -51,7 +51,6 @@ const fetchPokemons = async (searchParams: SearchParams): Promise<Props['props']
 
 export default async function Page({ searchParams }: { searchParams: SearchParams }) {
   const props = await fetchPokemons(searchParams)
-
   return (
     <Index props={props} />
   )

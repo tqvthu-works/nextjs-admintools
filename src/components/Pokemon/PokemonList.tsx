@@ -16,7 +16,6 @@ type Props = {
 
 export default function PokemonList(props: Props) {
   const { pokemons, setSort, setOrder } = props
-
   return (
     <Table responsive bordered hover>
       <thead className="bg-light">
@@ -53,9 +52,9 @@ export default function PokemonList(props: Props) {
             </td>
             <td>{pokemon.name}</td>
             <td>
-              {pokemon.types.map((type) => <span key={type} className="me-2"><PokemonTypeLabel type={type} /></span>)}
+              {pokemon.types.map((type) => <span key={type.name} className="me-2"><PokemonTypeLabel type={type.name} /></span>)}
             </td>
-            <td className="text-center" style={{ whiteSpace: 'pre' }}>{pokemon.egg_groups.join('\n')}</td>
+            <td className="text-center" style={{ whiteSpace: 'pre' }}>{pokemon.egg_groups.map((item) => item.name).join(',')}</td>
             <td className="text-end">{pokemon.hp}</td>
             <td className="text-end">{pokemon.attack}</td>
             <td className="text-end">{pokemon.defense}</td>

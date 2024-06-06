@@ -34,7 +34,7 @@ export default function Index(props: Props) {
 
   const router = useRouter()
 
-  const pokemonListURL = `${process.env.NEXT_PUBLIC_POKEMON_LIST_API_BASE_URL}pokemons` || ''
+  const pokemonListURL = `${process.env.NEXT_PUBLIC_POKEMON_LIST_API_BASE_URL}en_pokemons` || ''
 
   // swr: data -> axios: data -> resource: data
   const { data: { data: resource } } = useSWRAxios<Resource<Pokemon>>({
@@ -55,7 +55,6 @@ export default function Index(props: Props) {
       'x-total-count': pokemonResource.meta.total.toString(),
     },
   })
-
   return (
     <Card>
       <Card.Header>Pokémon</Card.Header>
