@@ -12,7 +12,8 @@ export async function authenticate(
       switch (error.type) {
         case 'CredentialsSignin':
           return 'Invalid credentials.';
-      
+        case 'CallbackRouteError':
+          return 'Invalid username or password.';
         default:
           return 'Something went wrong.!!!!';
       }

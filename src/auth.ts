@@ -31,23 +31,17 @@ export const { auth, signIn, signOut } = NextAuth({
   providers: [
     Credentials({
       async authorize(credentials) {
-        try {
-            const { username, password } = await signInSchema.parseAsync(credentials);
-            const user = await getUser(username);
-            if (!user) {
-              return null;
-            }
-            const passwordsMatch = await bcryptjs.compare(password, user!.password);
-            if (passwordsMatch) {
-              return { email: user!.email, name: user!.name};
-            }
+        const { username, password } = await signInSchema.parseAsync(credentials);
+        const user = await getUser(username);
+        if (!user) {
           return null;
-        } catch (error) {
-          if (error instanceof ZodError) {
-            console.error("Failed to validate credentials:-----xxxxxxxxxx----------", error.errors);
-          }
-          return null
         }
+        const passwordsMatch = await bcryptjs.compare(password, user!.password);
+        if (passwordsMatch) {
+          return { email: user!.email, name: user!.name };
+        }
+        return null;
+
       },
     }),
   ],

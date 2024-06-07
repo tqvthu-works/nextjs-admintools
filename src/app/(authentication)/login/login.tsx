@@ -28,7 +28,7 @@ export default function Login() {
             disabled={pending}
             placeholder="Username"
             aria-label="Username"
-            defaultValue="Username"
+            defaultValue=""
           />
         </InputGroup>
 
@@ -43,7 +43,7 @@ export default function Login() {
             disabled={pending}
             placeholder="Password"
             aria-label="Password"
-            defaultValue="Password"
+            defaultValue=""
           />
         </InputGroup>
 
