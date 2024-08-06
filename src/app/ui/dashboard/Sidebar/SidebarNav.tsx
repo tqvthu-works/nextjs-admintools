@@ -8,11 +8,15 @@ import {
   faCode,
   faDroplet,
   faGauge,
+  faL,
   faLayerGroup,
+  faList,
   faLocationArrow,
   faPencil,
+  faPlug,
   faPuzzlePiece,
   faRightToBracket,
+  faTh,
 } from '@fortawesome/free-solid-svg-icons'
 import React, { PropsWithChildren } from 'react'
 import { Badge } from 'react-bootstrap'
@@ -30,6 +34,13 @@ const SidebarNavTitle = (props: PropsWithChildren) => {
 export default function SidebarNav() {
   return (
     <ul className="list-unstyled">
+      <SidebarNavTitle>Shops</SidebarNavTitle>
+
+      <SidebarNavGroup toggleIcon={faTh} toggleText="Shops">
+        <SidebarNavItem icon={faList} href="/shops?is_test=true">Testing</SidebarNavItem>
+      </SidebarNavGroup>
+
+
       <SidebarNavItem icon={faGauge} href="/">
         Dashboard
         <small className="ms-auto"><Badge bg="info" className="ms-auto">NEW</Badge></small>

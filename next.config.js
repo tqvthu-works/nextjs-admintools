@@ -16,6 +16,9 @@ const nextConfig = {
         port: "",
       },
     ],
+  },
+  api: {
+    per_page: 20,
   }
 };
 
