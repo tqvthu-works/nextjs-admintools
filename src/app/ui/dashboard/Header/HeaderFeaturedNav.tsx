@@ -10,13 +10,8 @@ export default function HeaderFeaturedNav() {
         </Link>
       </NavItem>
       <NavItem>
-        <Link href="#" passHref legacyBehavior>
-          <NavLink className="p-2">Users</NavLink>
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link href="#" passHref legacyBehavior>
-          <NavLink className="p-2">Settings</NavLink>
+        <Link href="/shops" passHref legacyBehavior>
+          <NavLink className="p-2">Shops</NavLink>
         </Link>
       </NavItem>
     </Nav>
