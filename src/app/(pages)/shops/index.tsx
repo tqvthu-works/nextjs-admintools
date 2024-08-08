@@ -1,19 +1,18 @@
 "use client";
-
 import { Button, Card } from "react-bootstrap";
 import React from "react";
-import { newResource, Resource } from "@/models/resource";
+import { IPagination } from "@/types/pagination";
+import { PaginationHelper } from "@/app/helpers/pagination";
 import useSWRAxios, { transformResponseWrapper } from "@/hooks/useSWRAxios";
 import Pagination from "@/components/Pagination/Pagination";
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import type { Shop } from "@prisma/client";
+import type { shops as Shop } from "prisma/generated/client-api";
 import ShopList from "@/components/Shop/ShopList";
-
 export type Props = {
   props: {
-    shopResource: Resource<Shop>;
+    shopResource: IPagination<Shop>;
     page: number;
     perPage: number;
     sort: string;
@@ -33,7 +32,7 @@ export default function Index(props: Props) {
   // swr: data -> axios: data -> resource: data
   const {
     data: { data: resource },
-  } = useSWRAxios<Resource<Shop>>(
+  } = useSWRAxios<IPagination<Shop>>(
     {
       url: getShopsUrl,
       params: {
@@ -44,7 +43,7 @@ export default function Index(props: Props) {
       },
       transformResponse: transformResponseWrapper((d: Shop[], h) => {
         const total = h ? parseInt(h["x-total-count"], 10) : 0;
-        return newResource(d, total, page, perPage);
+        return PaginationHelper.getInstance<Shop>(total, perPage).getData(d, page);
       }),
     },
     {

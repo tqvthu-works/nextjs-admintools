@@ -19,6 +19,9 @@ const nextConfig = {
   },
   api: {
     per_page: 20,
+    bodyParser: {
+      sizeLimit: '1mb',
+    },
   }
 };
 

@@ -40,22 +40,39 @@ https://nextjs-dashboard-olive.vercel.app/register
 
 ## Getting Started
 
-First, setup the application:
-
-```bash
-pnpm install
-```
-
-Then, run the development server:
-
-```bash
-pnpm run dev
-```
+- First, setup the application:
+   ```bash
+   npm install
+   ```
+- Generate prisma client
+   - admin database
+      ```bash
+      npx prisma generate --schema=prisma/schema.prisma
+      ```
+   - api database
+      ```bash
+      npx prisma generate --schema=prisma/schema.prisma
+      ```
+- Run the development server:
+   ```bash
+   npm run dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/(dashboard)/page.tsx`. The page auto-updates as you edit the file.
-
+## Prisma lifecycle
+- When the database schema changes, must have to do:
+   - Update prisma models
+      ```bash
+      npx prisma db pull --schema prisma/schema.prisma
+      npx prisma db pull --schema prisma/api-schema.prisma
+      ```
+   - Update prisma clients
+      ```bash
+      npx prisma generate --schema=prisma/schema.prisma
+      npx prisma generate --schema=prisma/api-schema.prisma
+      ```
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

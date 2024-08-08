@@ -1,22 +1,8 @@
 import NextAuth from "next-auth";
 import { authConfig } from "@/auth.config";
 import Credentials from "next-auth/providers/credentials";
-import { ZodError, z, object, string } from "zod";
-import type { User } from "@prisma/client";
-import bcryptjs from "bcryptjs";
-import { PrismaClient } from "@prisma/client";
+import { object, string } from "zod";
 
-async function getUser(email: string): Promise<User | undefined> {
-  try {
-    const prisma = new PrismaClient();
-    const user = await prisma.user.findFirst({ where: { email } });
-    return user!;
-
-  } catch (error) {
-    console.error("Failed to fetch user:", error);
-    throw new Error("Failed to fetch user.");
-  }
-}
 export const signInSchema = object({
   username: string({ required_error: "Email is required" })
     .min(1, "Email is required")
@@ -32,16 +18,18 @@ export const { auth, signIn, signOut } = NextAuth({
     Credentials({
       async authorize(credentials) {
         const { username, password } = await signInSchema.parseAsync(credentials);
-        const user = await getUser(username);
-        if (!user) {
+        const response = await fetch(`${process.env.ADMIN_API_URL}/api/admin/users/login`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: username, password }),
+        });
+        if (!response.ok) {
           return null;
         }
-        const passwordsMatch = await bcryptjs.compare(password, user!.password);
-        if (passwordsMatch) {
-          return { email: user!.email, name: user!.name };
-        }
-        return null;
-
+        const user = (await response.json()).data;
+        return { email: user!.email, name: user!.name };
       },
     }),
   ],
