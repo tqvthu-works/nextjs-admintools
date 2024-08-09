@@ -202,14 +202,10 @@ export default function Page() {
             </div>
             <div className="d-none d-md-block">
               <ButtonGroup aria-label="Toolbar with buttons" className="mx-3">
-                <input
-                  className="btn-check"
-                  id="option1"
-                  type="radio"
-                  name="options"
-                  autoComplete="off"
-                />
-                <label className="btn btn-outline-secondary" htmlFor="option1">Day</label>
+                <input className="btn-check" id="option1" type="radio" name="options" autoComplete="off" />
+                <label className="btn btn-outline-secondary" htmlFor="option1">
+                  Day
+                </label>
                 <input
                   className="btn-check"
                   id="option2"
@@ -218,20 +214,13 @@ export default function Page() {
                   autoComplete="off"
                   defaultChecked
                 />
-                <label
-                  className="btn btn-outline-secondary active"
-                  htmlFor="option2"
-                >
+                <label className="btn btn-outline-secondary active" htmlFor="option2">
                   Month
                 </label>
-                <input
-                  className="btn-check"
-                  id="option3"
-                  type="radio"
-                  name="options"
-                  autoComplete="off"
-                />
-                <label className="btn btn-outline-secondary" htmlFor="option3">Year</label>
+                <input className="btn-check" id="option3" type="radio" name="options" autoComplete="off" />
+                <label className="btn btn-outline-secondary" htmlFor="option3">
+                  Year
+                </label>
               </ButtonGroup>
               <Button variant="primary">
                 <FontAwesomeIcon icon={faDownload} fixedWidth />
@@ -252,47 +241,27 @@ export default function Page() {
             <div className="col mb-sm-2 mb-0">
               <div className="text-black-50">Visits</div>
               <div className="fw-semibold">29.703 Users (40%)</div>
-              <ProgressBar
-                className="progress-thin mt-2"
-                variant="success"
-                now={40}
-              />
+              <ProgressBar className="progress-thin mt-2" variant="success" now={40} />
             </div>
             <div className="col mb-sm-2 mb-0">
               <div className="text-black-50">Unique</div>
               <div className="fw-semibold">24.093 Users (20%)</div>
-              <ProgressBar
-                className="progress-thin mt-2"
-                variant="info"
-                now={20}
-              />
+              <ProgressBar className="progress-thin mt-2" variant="info" now={20} />
             </div>
             <div className="col mb-sm-2 mb-0">
               <div className="text-black-50">Page views</div>
               <div className="fw-semibold">78.706 Views (60%)</div>
-              <ProgressBar
-                className="progress-thin mt-2"
-                variant="warning"
-                now={60}
-              />
+              <ProgressBar className="progress-thin mt-2" variant="warning" now={60} />
             </div>
             <div className="col mb-sm-2 mb-0">
               <div className="text-black-50">New Users</div>
               <div className="fw-semibold">22.123 Users (80%)</div>
-              <ProgressBar
-                className="progress-thin mt-2"
-                variant="danger"
-                now={80}
-              />
+              <ProgressBar className="progress-thin mt-2" variant="danger" now={80} />
             </div>
             <div className="col mb-sm-2 mb-0">
               <div className="text-black-50">Bounce Rate</div>
               <div className="fw-semibold">40.15%</div>
-              <ProgressBar
-                className="progress-thin mt-2"
-                variant="primary"
-                now={40}
-              />
+              <ProgressBar className="progress-thin mt-2" variant="primary" now={40} />
             </div>
           </div>
         </CardFooter>
@@ -300,17 +269,9 @@ export default function Page() {
 
       <div className="row">
         <div className="col-sm-6 col-lg-4">
-          <Card
-            className="mb-4"
-            style={{ '--bs-card-cap-bg': '#3b5998' } as React.CSSProperties}
-          >
+          <Card className="mb-4" style={{ '--bs-card-cap-bg': '#3b5998' } as React.CSSProperties}>
             <CardHeader className="d-flex justify-content-center align-items-center">
-              <FontAwesomeIcon
-                icon={faFacebookF}
-                fixedWidth
-                size="3x"
-                className="my-4 text-white"
-              />
+              <FontAwesomeIcon icon={faFacebookF} fixedWidth size="3x" className="my-4 text-white" />
             </CardHeader>
             <CardBody>
               <div className="row text-center">
@@ -329,17 +290,9 @@ export default function Page() {
         </div>
 
         <div className="col-sm-6 col-lg-4">
-          <Card
-            className="mb-4"
-            style={{ '--bs-card-cap-bg': '#00aced' } as React.CSSProperties}
-          >
+          <Card className="mb-4" style={{ '--bs-card-cap-bg': '#00aced' } as React.CSSProperties}>
             <CardHeader className="d-flex justify-content-center align-items-center">
-              <FontAwesomeIcon
-                icon={faTwitter}
-                fixedWidth
-                size="3x"
-                className="my-4 text-white"
-              />
+              <FontAwesomeIcon icon={faTwitter} fixedWidth size="3x" className="my-4 text-white" />
             </CardHeader>
             <CardBody>
               <div className="row text-center">
@@ -358,17 +311,9 @@ export default function Page() {
         </div>
 
         <div className="col-sm-6 col-lg-4">
-          <Card
-            className="mb-4"
-            style={{ '--bs-card-cap-bg': '#4875b4' } as React.CSSProperties}
-          >
+          <Card className="mb-4" style={{ '--bs-card-cap-bg': '#4875b4' } as React.CSSProperties}>
             <CardHeader className="d-flex justify-content-center align-items-center">
-              <FontAwesomeIcon
-                icon={faLinkedinIn}
-                fixedWidth
-                size="3x"
-                className="my-4 text-white"
-              />
+              <FontAwesomeIcon icon={faLinkedinIn} fixedWidth size="3x" className="my-4 text-white" />
             </CardHeader>
             <CardBody>
               <div className="row text-center">
@@ -385,178 +330,100 @@ export default function Page() {
             </CardBody>
           </Card>
         </div>
-
       </div>
 
       <div className="row">
         <div className="col-md-12">
           <Card>
-            <CardHeader>
-              Traffic &amp; Sales
-            </CardHeader>
+            <CardHeader>Traffic &amp; Sales</CardHeader>
             <CardBody>
               <div className="row">
                 <div className="col-sm-6">
                   <div className="row">
                     <div className="col-6">
                       <div className="border-start border-4 border-info px-3 mb-3">
-                        <small className="text-black-50">
-                          New Clients
-                        </small>
+                        <small className="text-black-50">New Clients</small>
                         <div className="fs-5 fw-semibold">9,123</div>
                       </div>
                     </div>
 
                     <div className="col-6">
                       <div className="border-start border-4 border-danger px-3 mb-3">
-                        <small className="text-black-50">
-                          Recurring Clients
-                        </small>
+                        <small className="text-black-50">Recurring Clients</small>
                         <div className="fs-5 fw-semibold">22,643</div>
                       </div>
                     </div>
-
                   </div>
 
                   <hr className="mt-0" />
 
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
-                      <span className="text-black-50 small">
-                        Monday
-                      </span>
+                      <span className="text-black-50 small">Monday</span>
                     </div>
                     <div className="col">
-                      <ProgressBar
-                        className="progress-thin mb-1"
-                        variant="primary"
-                        now={34}
-                      />
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="danger"
-                        now={78}
-                      />
+                      <ProgressBar className="progress-thin mb-1" variant="primary" now={34} />
+                      <ProgressBar className="progress-thin" variant="danger" now={78} />
                     </div>
                   </div>
 
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
-                      <span className="text-black-50 small">
-                        Tuesday
-                      </span>
+                      <span className="text-black-50 small">Tuesday</span>
                     </div>
                     <div className="col">
-                      <ProgressBar
-                        className="progress-thin mb-1"
-                        variant="primary"
-                        now={56}
-                      />
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="danger"
-                        now={94}
-                      />
+                      <ProgressBar className="progress-thin mb-1" variant="primary" now={56} />
+                      <ProgressBar className="progress-thin" variant="danger" now={94} />
                     </div>
                   </div>
 
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
-                      <span className="text-black-50 small">
-                        Wednesday
-                      </span>
+                      <span className="text-black-50 small">Wednesday</span>
                     </div>
                     <div className="col">
-                      <ProgressBar
-                        className="progress-thin mb-1"
-                        variant="primary"
-                        now={12}
-                      />
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="danger"
-                        now={67}
-                      />
+                      <ProgressBar className="progress-thin mb-1" variant="primary" now={12} />
+                      <ProgressBar className="progress-thin" variant="danger" now={67} />
                     </div>
                   </div>
 
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
-                      <span className="text-black-50 small">
-                        Thursday
-                      </span>
+                      <span className="text-black-50 small">Thursday</span>
                     </div>
                     <div className="col">
-                      <ProgressBar
-                        className="progress-thin mb-1"
-                        variant="primary"
-                        now={43}
-                      />
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="danger"
-                        now={91}
-                      />
+                      <ProgressBar className="progress-thin mb-1" variant="primary" now={43} />
+                      <ProgressBar className="progress-thin" variant="danger" now={91} />
                     </div>
                   </div>
 
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
-                      <span className="text-black-50 small">
-                        Friday
-                      </span>
+                      <span className="text-black-50 small">Friday</span>
                     </div>
                     <div className="col">
-                      <ProgressBar
-                        className="progress-thin mb-1"
-                        variant="primary"
-                        now={22}
-                      />
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="danger"
-                        now={73}
-                      />
+                      <ProgressBar className="progress-thin mb-1" variant="primary" now={22} />
+                      <ProgressBar className="progress-thin" variant="danger" now={73} />
                     </div>
                   </div>
 
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
-                      <span className="text-black-50 small">
-                        Saturday
-                      </span>
+                      <span className="text-black-50 small">Saturday</span>
                     </div>
                     <div className="col">
-                      <ProgressBar
-                        className="progress-thin mb-1"
-                        variant="primary"
-                        now={53}
-                      />
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="danger"
-                        now={82}
-                      />
+                      <ProgressBar className="progress-thin mb-1" variant="primary" now={53} />
+                      <ProgressBar className="progress-thin" variant="danger" now={82} />
                     </div>
                   </div>
 
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
-                      <span className="text-black-50 small">
-                        Sunday
-                      </span>
+                      <span className="text-black-50 small">Sunday</span>
                     </div>
                     <div className="col">
-                      <ProgressBar
-                        className="progress-thin mb-1"
-                        variant="primary"
-                        now={9}
-                      />
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="danger"
-                        now={69}
-                      />
+                      <ProgressBar className="progress-thin mb-1" variant="primary" now={9} />
+                      <ProgressBar className="progress-thin" variant="danger" now={69} />
                     </div>
                   </div>
                 </div>
@@ -565,22 +432,17 @@ export default function Page() {
                   <div className="row">
                     <div className="col-6">
                       <div className="border-start border-4 border-warning px-3 mb-3">
-                        <small className="text-black-50">
-                          Pageviews
-                        </small>
+                        <small className="text-black-50">Pageviews</small>
                         <div className="fs-5 fw-semibold">78,623</div>
                       </div>
                     </div>
 
                     <div className="col-6">
                       <div className="border-start border-4 border-success px-3 mb-3">
-                        <small className="text-black-50">
-                          Organic
-                        </small>
+                        <small className="text-black-50">Organic</small>
                         <div className="fs-5 fw-semibold">49,123</div>
                       </div>
                     </div>
-
                   </div>
 
                   <hr className="mt-0" />
@@ -594,11 +456,7 @@ export default function Page() {
                         </div>
                         <div className="ms-auto fw-semibold">43%</div>
                       </div>
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="warning"
-                        now={43}
-                      />
+                      <ProgressBar className="progress-thin" variant="warning" now={43} />
                     </div>
 
                     <div className="mb-3">
@@ -609,11 +467,7 @@ export default function Page() {
                         </div>
                         <div className="ms-auto fw-semibold">37%</div>
                       </div>
-                      <ProgressBar
-                        className="progress-thin"
-                        variant="warning"
-                        now={37}
-                      />
+                      <ProgressBar className="progress-thin" variant="warning" now={37} />
                     </div>
                   </div>
 
@@ -626,11 +480,7 @@ export default function Page() {
                       <div className="ms-auto fw-semibold me-2">191.235</div>
                       <div className="text-black-50 small">(56%)</div>
                     </div>
-                    <ProgressBar
-                      className="progress-thin"
-                      variant="success"
-                      now={56}
-                    />
+                    <ProgressBar className="progress-thin" variant="success" now={56} />
                   </div>
 
                   <div className="mb-3">
@@ -642,11 +492,7 @@ export default function Page() {
                       <div className="ms-auto fw-semibold me-2">51.223</div>
                       <div className="text-black-50 small">(15%)</div>
                     </div>
-                    <ProgressBar
-                      className="progress-thin"
-                      variant="success"
-                      now={15}
-                    />
+                    <ProgressBar className="progress-thin" variant="success" now={15} />
                   </div>
 
                   <div className="mb-3">
@@ -658,11 +504,7 @@ export default function Page() {
                       <div className="ms-auto fw-semibold me-2">37.564</div>
                       <div className="text-black-50 small">(11%)</div>
                     </div>
-                    <ProgressBar
-                      className="progress-thin"
-                      variant="success"
-                      now={11}
-                    />
+                    <ProgressBar className="progress-thin" variant="success" now={11} />
                   </div>
 
                   <div className="mb-3">
@@ -674,11 +516,7 @@ export default function Page() {
                       <div className="ms-auto fw-semibold me-2">27.319</div>
                       <div className="text-black-50 small">(8%)</div>
                     </div>
-                    <ProgressBar
-                      className="progress-thin"
-                      variant="success"
-                      now={8}
-                    />
+                    <ProgressBar className="progress-thin" variant="success" now={8} />
                   </div>
                 </div>
               </div>
@@ -710,9 +548,7 @@ export default function Page() {
                             src="/assets/img/avatars/1.jpg"
                             alt="user@email.com"
                           />
-                          <span
-                            className="avatar-status position-absolute d-block bottom-0 end-0 bg-success rounded-circle border border-white"
-                          />
+                          <span className="avatar-status position-absolute d-block bottom-0 end-0 bg-success rounded-circle border border-white" />
                         </div>
                       </td>
                       <td>
@@ -729,9 +565,7 @@ export default function Page() {
                             <div className="fw-semibold">50%</div>
                           </div>
                           <div className="float-end">
-                            <small className="text-black-50">
-                              Jun 11, 2020 - Jul 10, 2020
-                            </small>
+                            <small className="text-black-50">Jun 11, 2020 - Jul 10, 2020</small>
                           </div>
                         </div>
                         <ProgressBar className="progress-thin" variant="success" now={50} />
@@ -757,10 +591,7 @@ export default function Page() {
                           <DropdownMenu>
                             <DropdownItem href="#/action-1">Info</DropdownItem>
                             <DropdownItem href="#/action-2">Edit</DropdownItem>
-                            <DropdownItem
-                              className="text-danger"
-                              href="#/action-3"
-                            >
+                            <DropdownItem className="text-danger" href="#/action-3">
                               Delete
                             </DropdownItem>
                           </DropdownMenu>
@@ -777,9 +608,7 @@ export default function Page() {
                             src="/assets/img/avatars/2.jpg"
                             alt="user@email.com"
                           />
-                          <span
-                            className="avatar-status position-absolute d-block bottom-0 end-0 bg-danger rounded-circle border border-white"
-                          />
+                          <span className="avatar-status position-absolute d-block bottom-0 end-0 bg-danger rounded-circle border border-white" />
                         </div>
                       </td>
                       <td>
@@ -796,9 +625,7 @@ export default function Page() {
                             <div className="fw-semibold">10%</div>
                           </div>
                           <div className="float-end">
-                            <small className="text-black-50">
-                              Jun 11, 2020 - Jul 10, 2020
-                            </small>
+                            <small className="text-black-50">Jun 11, 2020 - Jul 10, 2020</small>
                           </div>
                         </div>
                         <ProgressBar className="progress-thin" variant="info" now={10} />
@@ -824,10 +651,7 @@ export default function Page() {
                           <DropdownMenu>
                             <DropdownItem href="#/action-1">Info</DropdownItem>
                             <DropdownItem href="#/action-2">Edit</DropdownItem>
-                            <DropdownItem
-                              className="text-danger"
-                              href="#/action-3"
-                            >
+                            <DropdownItem className="text-danger" href="#/action-3">
                               Delete
                             </DropdownItem>
                           </DropdownMenu>
@@ -844,9 +668,7 @@ export default function Page() {
                             src="/assets/img/avatars/3.jpg"
                             alt="user@email.com"
                           />
-                          <span
-                            className="avatar-status position-absolute d-block bottom-0 end-0 bg-warning rounded-circle border border-white"
-                          />
+                          <span className="avatar-status position-absolute d-block bottom-0 end-0 bg-warning rounded-circle border border-white" />
                         </div>
                       </td>
                       <td>
@@ -863,9 +685,7 @@ export default function Page() {
                             <div className="fw-semibold">74%</div>
                           </div>
                           <div className="float-end">
-                            <small className="text-black-50">
-                              Jun 11, 2020 - Jul 10, 2020
-                            </small>
+                            <small className="text-black-50">Jun 11, 2020 - Jul 10, 2020</small>
                           </div>
                         </div>
                         <ProgressBar className="progress-thin" variant="warning" now={74} />
@@ -891,10 +711,7 @@ export default function Page() {
                           <DropdownMenu>
                             <DropdownItem href="#/action-1">Info</DropdownItem>
                             <DropdownItem href="#/action-2">Edit</DropdownItem>
-                            <DropdownItem
-                              className="text-danger"
-                              href="#/action-3"
-                            >
+                            <DropdownItem className="text-danger" href="#/action-3">
                               Delete
                             </DropdownItem>
                           </DropdownMenu>
@@ -911,9 +728,7 @@ export default function Page() {
                             src="/assets/img/avatars/4.jpg"
                             alt="user@email.com"
                           />
-                          <span
-                            className="avatar-status position-absolute d-block bottom-0 end-0 bg-secondary rounded-circle border border-white"
-                          />
+                          <span className="avatar-status position-absolute d-block bottom-0 end-0 bg-secondary rounded-circle border border-white" />
                         </div>
                       </td>
                       <td>
@@ -930,9 +745,7 @@ export default function Page() {
                             <div className="fw-semibold">98%</div>
                           </div>
                           <div className="float-end">
-                            <small className="text-black-50">
-                              Jun 11, 2020 - Jul 10, 2020
-                            </small>
+                            <small className="text-black-50">Jun 11, 2020 - Jul 10, 2020</small>
                           </div>
                         </div>
                         <ProgressBar className="progress-thin" variant="danger" now={98} />
@@ -958,10 +771,7 @@ export default function Page() {
                           <DropdownMenu>
                             <DropdownItem href="#/action-1">Info</DropdownItem>
                             <DropdownItem href="#/action-2">Edit</DropdownItem>
-                            <DropdownItem
-                              className="text-danger"
-                              href="#/action-3"
-                            >
+                            <DropdownItem className="text-danger" href="#/action-3">
                               Delete
                             </DropdownItem>
                           </DropdownMenu>
@@ -978,9 +788,7 @@ export default function Page() {
                             src="/assets/img/avatars/5.jpg"
                             alt="user@email.com"
                           />
-                          <span
-                            className="avatar-status position-absolute d-block bottom-0 end-0 bg-success rounded-circle border border-white"
-                          />
+                          <span className="avatar-status position-absolute d-block bottom-0 end-0 bg-success rounded-circle border border-white" />
                         </div>
                       </td>
                       <td>
@@ -997,9 +805,7 @@ export default function Page() {
                             <div className="fw-semibold">22%</div>
                           </div>
                           <div className="float-end">
-                            <small className="text-black-50">
-                              Jun 11, 2020 - Jul 10, 2020
-                            </small>
+                            <small className="text-black-50">Jun 11, 2020 - Jul 10, 2020</small>
                           </div>
                         </div>
                         <ProgressBar className="progress-thin" variant="info" now={22} />
@@ -1025,10 +831,7 @@ export default function Page() {
                           <DropdownMenu>
                             <DropdownItem href="#/action-1">Info</DropdownItem>
                             <DropdownItem href="#/action-2">Edit</DropdownItem>
-                            <DropdownItem
-                              className="text-danger"
-                              href="#/action-3"
-                            >
+                            <DropdownItem className="text-danger" href="#/action-3">
                               Delete
                             </DropdownItem>
                           </DropdownMenu>
@@ -1045,9 +848,7 @@ export default function Page() {
                             src="/assets/img/avatars/6.jpg"
                             alt="user@email.com"
                           />
-                          <span
-                            className="avatar-status position-absolute d-block bottom-0 end-0 bg-danger rounded-circle border border-white"
-                          />
+                          <span className="avatar-status position-absolute d-block bottom-0 end-0 bg-danger rounded-circle border border-white" />
                         </div>
                       </td>
                       <td>
@@ -1064,9 +865,7 @@ export default function Page() {
                             <div className="fw-semibold">43%</div>
                           </div>
                           <div className="float-end">
-                            <small className="text-black-50">
-                              Jun 11, 2020 - Jul 10, 2020
-                            </small>
+                            <small className="text-black-50">Jun 11, 2020 - Jul 10, 2020</small>
                           </div>
                         </div>
                         <ProgressBar className="progress-thin" variant="success" now={43} />
@@ -1092,10 +891,7 @@ export default function Page() {
                           <DropdownMenu>
                             <DropdownItem href="#/action-1">Info</DropdownItem>
                             <DropdownItem href="#/action-2">Edit</DropdownItem>
-                            <DropdownItem
-                              className="text-danger"
-                              href="#/action-3"
-                            >
+                            <DropdownItem className="text-danger" href="#/action-3">
                               Delete
                             </DropdownItem>
                           </DropdownMenu>

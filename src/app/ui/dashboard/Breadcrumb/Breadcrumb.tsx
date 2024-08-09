@@ -16,6 +16,7 @@ export default function Breadcrumb() {
         const href = `/${pathSegments.slice(0, index + 1).join('/')}`
 
         return (
+          // eslint-disable-next-line react/no-array-index-key
           <BreadcrumbItem key={index} linkProps={{ className: 'text-decoration-none' }} href={href}>
             {segment.charAt(0).toUpperCase() + segment.slice(1)}
             {' '}

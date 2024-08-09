@@ -1,7 +1,6 @@
 import { SearchParams } from '@/types/next'
 import { IPagination } from '@/types/pagination'
 import { api } from '@/config/app'
-import { notFound } from 'next/navigation'
 import { PaginationHelper } from '../helpers/pagination'
 import { FetchHelper } from '../helpers/fetcher'
 
@@ -24,6 +23,7 @@ export class CommonService<T> {
     return CommonService.instance as CommonService<T>
   }
 
+  // eslint-disable-next-line class-methods-use-this
   public async getList(searchParams: SearchParams, path: string): Promise<Props<T>['props']> {
     let page = 1
     if (searchParams?.page) {

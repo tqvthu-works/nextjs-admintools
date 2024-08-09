@@ -1,10 +1,8 @@
 'use client'
 
 import type { shops as Shop } from 'prisma/generated/client-api'
-import {
-  Alert, Button, Col, Form, Row,
-} from 'react-bootstrap'
-import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import { Alert, Button, Form } from 'react-bootstrap'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import React, { useState } from 'react'
 import FormError from '@/components/Form/FormError'
 

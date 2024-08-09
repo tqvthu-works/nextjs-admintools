@@ -3,6 +3,7 @@
 import { signIn } from '@/auth'
 import { AuthError } from 'next-auth'
 
+// eslint-disable-next-line consistent-return
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,

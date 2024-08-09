@@ -71,6 +71,7 @@
     ],
      "@typescript-eslint/no-explicit-any": "off",
      "radix": "off",
-     "no-param-reassign": ["error", { "props": false }]
+     "no-param-reassign": ["error", { "props": false }],
+     "max-len": ["error", { "code": 150 }]
   }
 }

@@ -1,6 +1,5 @@
 import type { NextAuthConfig } from 'next-auth'
-import { NextRequest, NextResponse } from 'next/server'
-import { Next } from 'react-bootstrap/esm/PageItem'
+import { NextResponse } from 'next/server'
 
 export const authConfig = {
   pages: {
@@ -17,7 +16,7 @@ export const authConfig = {
 
       return true
     },
-    async redirect({ url, baseUrl }) {
+    async redirect({ baseUrl }) {
       /* known issue https://github.com/nextauthjs/next-auth/issues/10928 */
       return baseUrl
     },
