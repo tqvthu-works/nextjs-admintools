@@ -1,20 +1,22 @@
-"use client";
+'use client'
 
-import { Alert, Button, Col, Form, FormControl, InputGroup, Row } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
-import InputGroupText from "react-bootstrap/InputGroupText";
-import { authenticate } from "@/lib/action";
-import { useFormState, useFormStatus } from "react-dom";
+import {
+  Alert, Button, Col, Form, FormControl, InputGroup, Row,
+} from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faLock } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
+import InputGroupText from 'react-bootstrap/InputGroupText'
+import { authenticate } from '@/lib/action'
+import { useFormState, useFormStatus } from 'react-dom'
 
 export default function Login() {
-  const [error, dispatch] = useFormState(authenticate, undefined);
-  const { pending } = useFormStatus();
+  const [error, dispatch] = useFormState(authenticate, undefined)
+  const { pending } = useFormStatus()
   return (
     <>
-      <Alert variant="danger" show={error !== undefined}  dismissible>
+      <Alert variant="danger" show={error !== undefined} dismissible>
         {error}
       </Alert>
       <Form action={dispatch}>
@@ -61,5 +63,5 @@ export default function Login() {
         </Row>
       </Form>
     </>
-  );
+  )
 }

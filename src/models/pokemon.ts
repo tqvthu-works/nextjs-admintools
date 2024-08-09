@@ -37,7 +37,7 @@ export const pokemonTypes = [
   'shadow',
 ] as const
 
-export type PokemonType = {id: number, name:  typeof pokemonTypes[number]}
+export type PokemonType = { id: number; name: typeof pokemonTypes[number] }
 
 export const pokemonEggGroups = [
   'Monster',
@@ -57,4 +57,4 @@ export const pokemonEggGroups = [
   'Undiscovered',
 ] as const
 
-export type PokemonEggGroup = {id: number; name: typeof pokemonEggGroups[number]}
+export type PokemonEggGroup = { id: number; name: typeof pokemonEggGroups[number] }

@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
-export default async function Home() {
-    redirect('/dashboard');
-}
+import { redirect } from 'next/navigation'
 
+export default async function Home() {
+  redirect('/dashboard')
+}

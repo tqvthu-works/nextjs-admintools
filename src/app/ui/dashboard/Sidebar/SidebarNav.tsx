@@ -40,7 +40,6 @@ export default function SidebarNav() {
         <SidebarNavItem icon={faList} href="/shops?is_test=true">Testing</SidebarNavItem>
       </SidebarNavGroup>
 
-
       <SidebarNavItem icon={faGauge} href="/">
         Dashboard
         <small className="ms-auto"><Badge bg="info" className="ms-auto">NEW</Badge></small>
