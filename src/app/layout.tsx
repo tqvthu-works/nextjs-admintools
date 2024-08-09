@@ -4,6 +4,7 @@ import '@/styles/globals.scss'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import ProgressBar from '@/components/ProgressBar/ProgressBar'
+// import dynamic from 'next/dynamic'
 
 // You change this configuration value to false so that the Font Awesome core SVG library
 // will not try and insert <style> elements into the <head> of the page.
@@ -25,3 +26,4 @@ export default function RootLayout({
     </html>
   )
 }
+// export default dynamic(() => Promise.resolve(RootLayout), { ssr: false })

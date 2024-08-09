@@ -2,6 +2,7 @@ import { Table } from 'react-bootstrap'
 import React from 'react'
 import type { shops as Shop } from 'prisma/generated/client-api'
 import THSort from '@/components/TableSort/THSort'
+import Link from 'next/link';
 
 type Props = {
   shops: Shop[];
@@ -30,7 +31,7 @@ export default function ShopList(props: Props) {
       <tbody>
         {shops.map((shop) => (
           <tr key={shop.id}>
-            <td>{shop.id}</td>
+            <td> <Link href={`/shops/${shop.id}`}>{ shop.id }</Link></td>
             <td>{shop.shopify_domain}</td>
             <td>{shop.created_at!.toString()}</td>
             <td>{shop.updated_at!.toString()}</td>

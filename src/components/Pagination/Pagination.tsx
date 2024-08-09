@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Resource } from '@/models/resource'
 import Paginate from '@/components/Pagination/Paginate'
 import RowsPerPage from '@/components/Pagination/RowsPerPage'
@@ -27,8 +27,10 @@ export default function Pagination(props: Props) {
   return (
     <div className="row align-items-center justify-content-center">
       <Summary from={from} to={to} total={total} />
-      <RowsPerPage perPage={perPage} setPerPage={setPerPage} />
-      <Paginate currentPage={currentPage} lastPage={lastPage} setPage={setPage} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <RowsPerPage perPage={perPage} setPerPage={setPerPage} />
+        <Paginate currentPage={currentPage} lastPage={lastPage} setPage={setPage} />
+      </Suspense>
     </div>
   )
 }

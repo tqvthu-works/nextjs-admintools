@@ -5,7 +5,6 @@ import {
   faBug,
   faCalculator,
   faChartPie,
-  faCode,
   faDroplet,
   faGauge,
   faLayerGroup,
@@ -32,20 +31,14 @@ const SidebarNavTitle = (props: PropsWithChildren) => {
 export default function SidebarNav() {
   return (
     <ul className="list-unstyled">
-      <SidebarNavTitle>Shops</SidebarNavTitle>
+      <SidebarNavTitle>Dropilot</SidebarNavTitle>
+      <SidebarNavItem icon={faGauge} href="/dashboard">
+        Dashboard
+      </SidebarNavItem>
 
       <SidebarNavGroup toggleIcon={faTh} toggleText="Shops">
-        <SidebarNavItem icon={faList} href="/shops?is_test=true">Testing</SidebarNavItem>
+        <SidebarNavItem icon={faList} href="/shops">List</SidebarNavItem>
       </SidebarNavGroup>
-
-      <SidebarNavItem icon={faGauge} href="/">
-        Dashboard
-        <small className="ms-auto"><Badge bg="info" className="ms-auto">NEW</Badge></small>
-      </SidebarNavItem>
-      <SidebarNavItem icon={faCode} href="/pokemons">
-        Sample
-        <small className="ms-auto"><Badge bg="danger" className="ms-auto">DEMO</Badge></small>
-      </SidebarNavItem>
       <SidebarNavTitle>Theme</SidebarNavTitle>
       <SidebarNavItem icon={faDroplet} href="#">Colors</SidebarNavItem>
       <SidebarNavItem icon={faPencil} href="#">Typography</SidebarNavItem>

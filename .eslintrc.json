@@ -61,10 +61,7 @@
         ]
       }
     ],
-    "quotes": [
-      2,
-      "single"
-    ],
+    "quotes": [2, "backtick", "single", "double"],
     "semi": [
       2,
       "never"
