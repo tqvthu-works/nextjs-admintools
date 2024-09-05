@@ -1,11 +1,9 @@
-import {
-  Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Table,
-} from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
+import { Table } from 'react-bootstrap'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+// import Image from 'next/image'
+// import Link from 'next/link'
 import type { Shop } from '@prisma/client'
 import THSort from '@/components/TableSort/THSort'
 

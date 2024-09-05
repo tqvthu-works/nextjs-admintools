@@ -50,7 +50,8 @@ export default function SessionChart() {
         },
       }}
       data={{
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+          'August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April'],
         datasets: [{
           label: 'My First dataset',
           backgroundColor: 'rgba(255,255,255,.2)',

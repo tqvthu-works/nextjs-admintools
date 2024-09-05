@@ -61,13 +61,15 @@
         ]
       }
     ],
-    "quotes": [
-      2,
-      "single"
-    ],
+    "@typescript-eslint/no-unused-vars": "off",
     "semi": [
       2,
       "never"
-    ]
+    ],
+     "@typescript-eslint/no-explicit-any": "off",
+     "radix": "off",
+     "no-param-reassign": ["error", { "props": false }],
+     "max-len": ["error", { "code": 150 }],
+     "@typescript-eslint/quotes": [2, "single", { "avoidEscape": true }]
   }
 }
