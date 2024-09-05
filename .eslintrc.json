@@ -20,6 +20,7 @@
     }
   },
   "rules": {
+    "no-console": "off",
     "import/prefer-default-export": 0,
     // https://stackoverflow.com/questions/69928061/struggling-with-typescript-react-eslint-and-simple-arrow-functions-components
     "react/function-component-definition": [
@@ -62,14 +63,16 @@
       }
     ],
     "@typescript-eslint/no-unused-vars": "off",
-    "semi": [
-      2,
-      "never"
-    ],
+    "semi": "off",
+    // "semi": [
+    //   2,
+    //   "never"
+    // ],
      "@typescript-eslint/no-explicit-any": "off",
      "radix": "off",
      "no-param-reassign": ["error", { "props": false }],
      "max-len": ["error", { "code": 150 }],
-     "@typescript-eslint/quotes": [2, "single", { "avoidEscape": true }]
+     "@typescript-eslint/quotes": "off"
+    //  "@typescript-eslint/quotes": [2, "single", { "avoidEscape": true }]
   }
 }
