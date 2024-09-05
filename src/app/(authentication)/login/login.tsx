@@ -8,7 +8,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import InputGroupText from 'react-bootstrap/InputGroupText'
-import { authenticate } from '@/lib/action'
+import { authenticate } from '@app/lib/action'
 import { useFormState, useFormStatus } from 'react-dom'
 
 export default function Login() {

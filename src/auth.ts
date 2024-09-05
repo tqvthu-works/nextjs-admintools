@@ -6,12 +6,11 @@ import {
 } from 'zod'
 import type { User } from '@prisma/client'
 import bcryptjs from 'bcryptjs'
-import { PrismaClient } from '@prisma/client'
+import prismaClient from '@app/lib/prisma'
 
 async function getUser(email: string): Promise<User | undefined> {
   try {
-    const prisma = new PrismaClient()
-    const user = await prisma.user.findFirst({ where: { email } })
+    const user = await prismaClient.user.findFirst({ where: { email } })
     return user!
   } catch (error) {
     console.error('Failed to fetch user:', error)
