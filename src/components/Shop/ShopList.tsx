@@ -6,7 +6,7 @@ import React from 'react'
 // import Link from 'next/link'
 import type { Shop } from '@prisma/client'
 import THSort from '@/components/TableSort/THSort'
-
+import Link from 'next/link'
 type Props = {
   shops: Shop[];
 } & Pick<Parameters<typeof THSort>[0], 'setSort' | 'setOrder'>
@@ -18,20 +18,28 @@ export default function ShopList(props: Props) {
       <thead className="bg-light">
         <tr>
           <th><THSort name="id" setSort={setSort} setOrder={setOrder}>#</THSort></th>
+          <th>Name</th>
           <th><THSort name="shopify_domain" setSort={setSort} setOrder={setOrder}>Shopify Domain</THSort></th>
+          <th>Email</th>
+          <th>Installed Date</th>
+          <th>Is Expert</th>
+          <th>Pricing Plan</th>
+          <th>Request Submit App?</th>
           <th>Is Testing</th>
-          <th>Created At</th>
-          <th>Updated At</th>
         </tr>
       </thead>
       <tbody>
         {shops.map((shop) => (
           <tr key={shop.id}>
-            <td>{shop.id}</td>
+            <td><Link href={`/shops/${shop.id}`}>{shop.id}</Link></td>
+            <td>{shop.name}</td>
             <td>{shop.shopify_domain}</td>
-            <td>{shop.is_test ? 'Yes' : 'No'}</td>
+            <td>{shop.email}</td>
             <td>{shop.created_at!.toString()}</td>
-            <td>{shop.updated_at!.toString()}</td>
+            <td>{shop.is_expert ? 'Yes' : 'No'}</td>
+            <td>{shop.plan_name}</td>
+            <td>Yes</td>
+            <td>{shop.is_test ? 'Yes' : 'No'}</td>
           </tr>
         ))}
       </tbody>

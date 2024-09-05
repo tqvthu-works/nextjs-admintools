@@ -34,20 +34,16 @@ const SidebarNavTitle = (props: PropsWithChildren) => {
 export default function SidebarNav() {
   return (
     <ul className="list-unstyled">
-      <SidebarNavTitle>Shops</SidebarNavTitle>
-
-      <SidebarNavGroup toggleIcon={faTh} toggleText="Shops">
-        <SidebarNavItem icon={faList} href="/shops?is_test=true">Testing</SidebarNavItem>
-      </SidebarNavGroup>
-
       <SidebarNavItem icon={faGauge} href="/">
         Dashboard
         <small className="ms-auto"><Badge bg="info" className="ms-auto">NEW</Badge></small>
       </SidebarNavItem>
-      <SidebarNavItem icon={faCode} href="/pokemons">
-        Sample
-        <small className="ms-auto"><Badge bg="danger" className="ms-auto">DEMO</Badge></small>
-      </SidebarNavItem>
+      
+      <SidebarNavTitle>Shops</SidebarNavTitle>
+      <SidebarNavGroup toggleIcon={faTh} toggleText="Shops">
+        <SidebarNavItem icon={faList} href="/shops">List</SidebarNavItem>
+      </SidebarNavGroup>
+
       <SidebarNavTitle>Theme</SidebarNavTitle>
       <SidebarNavItem icon={faDroplet} href="#">Colors</SidebarNavItem>
       <SidebarNavItem icon={faPencil} href="#">Typography</SidebarNavItem>
