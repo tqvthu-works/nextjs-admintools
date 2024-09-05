@@ -19,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Suspense fallback={<div>Loading...</div>}>
           <ProgressBar />
         </Suspense>
+        {children}
       </body>
     </html>
   );
