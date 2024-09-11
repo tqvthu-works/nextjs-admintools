@@ -1,9 +1,9 @@
 import { type NextRequest } from 'next/server'
-import { PrismaClient } from '@prisma/client'
+import prismaClient from '@app/lib/prisma'
 
 export async function GET(request: NextRequest, q: any) {
   const { params } = q
-  const shop = await new PrismaClient().shop.findUnique({
+  const shop = await prismaClient.shop.findUnique({
     where: {
       id: Number(params.id),
     },
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest, q: any) {
 export async function PUT(request: NextRequest, q: any) {
   const { params } = q
   const body = await request.json()
-  const shop = await new PrismaClient().shop.update({
+  const shop = await prismaClient.shop.update({
     where: {
       id: Number(params.id),
     },

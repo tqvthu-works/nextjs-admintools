@@ -57,5 +57,53 @@ model Shop {
   publish_changes                    Boolean                              @default(false)
   in_app_notify                      Boolean                              @default(true)
   note                               String?                              @db.Text
+  subscription                       Subscription? 
+  onboarding                          Onboarding?
   @@map("shops")
+}
+
+model IntegrationShop {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  integration_id Int
+  shop_id        BigInt    @db.UnsignedBigInt
+  status         String    @default("0") @db.VarChar(255)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  meta           Json
+  @@map("integration_shop")
+}
+
+
+model Subscription {
+  id            Int       @id @default(autoincrement()) @db.UnsignedInt
+  shop_id       BigInt    @db.UnsignedBigInt @unique
+  name          String    @db.VarChar(250)
+  price         Int       @db.UnsignedInt
+  activated_on  DateTime? @db.Date
+  billing_on    DateTime? @db.Date
+  cancelled_on  DateTime? @db.Date
+  trial_ends_on DateTime? @db.Date
+  interval      String    @db.VarChar(100)
+  paused_at     DateTime? @db.Timestamp(0)
+  created_at    DateTime? @db.Timestamp(0)
+  updated_at    DateTime? @db.Timestamp(0)
+  charge_id     BigInt    @db.UnsignedBigInt
+  plan          String    @db.VarChar(100)
+  shop         Shop     @relation(fields: [shop_id], references: [id])
+  @@map("subscription")
+}
+model Onboarding {
+  id                 BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  shop_id            BigInt    @db.UnsignedBigInt @unique
+  select_theme       Boolean   @default(false)
+  theme_id           Int?
+  setup_branding     Boolean   @default(false)
+  design_mobile_app  Boolean   @default(false)
+  preview_mobile_app Boolean   @default(false)
+  app_submission     Boolean   @default(false)
+  dismiss_guide      Boolean   @default(false)
+  created_at         DateTime? @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+  shop              Shop      @relation(fields: [shop_id], references: [id])
+  @@map("onboarding_v2")
 }
